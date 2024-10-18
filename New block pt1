@@ -1,5 +1,5 @@
 /// crear una clase C con el nombre "BlockSpeedSand" ///
-
+/// importante, agregar las imagenes png a la carpeta src ///
 package net.minecraft.src;
 
 public class BlockSpeedSand extends Block {
