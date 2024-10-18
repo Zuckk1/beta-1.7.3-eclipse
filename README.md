@@ -8,4 +8,4 @@ ECLIPSE 2024 (cualquiera)
 
         IMPORTANTE
 
-cuando se instala el java 8 se tiene que agregar al environement de windows, si no va a tirar error el eclipse
+cuando se instala el java 8 se tiene que agregar al variable de entorno de windows Y al build path, en la seccion de libraries de ECLIPSE (el proyecto) para que este ejecute el programa con java 8
