@@ -3,7 +3,7 @@ archivos necesarios y explicacion para modear minecraft beta 1.7.3
 
 /// ARCHIVOS Y PROGRAMAS NECESARIOS ///
 
-JAVA 8 Y JAVA SE 8 (si no, modloader va a tirar error)
+JAVA 8 Y JAVA SE 8 (si no modloader va a tirar error ya que este no funciona con versiones actuales de java)
 ECLIPSE 2024 (cualquiera)
 
         IMPORTANTE
