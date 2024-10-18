@@ -1,0 +1,35 @@
+/// crear una clase C con el nombre "BlockSpeedSand" ///
+
+package net.minecraft.src;
+
+public class BlockSpeedSand extends Block {
+
+	public BlockSpeedSand(int i, Material mat){
+		super(i,mat);
+	}
+	
+	public AxisAlignedBB getColisionBoundingBoxFromPool(World world, int i, int j, int k){
+		float f = 0.125F;
+		return AxisAlignedBB.getBoundingBoxFromPool(i, j, k, i + 1,(float) (j+1)-f, k+1);
+	}
+	
+	public void onEntityCollidedWithBlock(World world, int i, int j, int k, Entity entity){
+	
+		entity.motionX *= 1.1;
+		entity.motionZ *= 1.1;
+		
+	}
+	
+	private int topTexture = ModLoader.addOverride("/terrain.png", "/SpeedSandTop.png");
+	private int sideTexture = ModLoader.addOverride("/terrain.png", "/SpeedSand.png");
+	
+	public int getBlockTextureFromSide(int i){
+		if(i==1){   //1 top face
+			return topTexture;
+		}else if(i==0){ // 0 = bottom face
+			return 88; //soulsand
+		}else{
+			return sideTexture;
+		}
+	}
+}
