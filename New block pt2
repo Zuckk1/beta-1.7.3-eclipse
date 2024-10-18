@@ -1,0 +1,32 @@
+ //// segun archivo a crear para hacer un bloque, con clase c igualmente dentro de net.minecraft.src, este con el nombre "mod_SpeedSand" ////
+
+package net.minecraft.src;
+
+public class mod_SpeedSand extends BaseMod{
+	
+	public mod_SpeedSand(){
+		int speedsandId = 145; //id del bloque
+		
+		/// crear nuevo objeto
+		Block speedsand = new BlockSpeedSand(speedsandId, Material.sand);
+		
+		// crear nuevo objeto en minecraft
+		ModLoader.RegisterBlock(speedsand);
+		//receta
+		ModLoader.AddRecipe(new ItemStack(speedsand, 64), new Object[] {
+				"DD",
+				Character.valueOf('D'), Block.dirt
+				
+		});
+		
+		speedsand.setHardness(0.1F);
+		speedsand.setBlockName("speedsand");
+		ModLoader.AddName(speedsand, "Speed Sand");
+		
+	}
+	
+	public String Version() {
+		return "v0.1 for beta 1.7.3";
+	}
+
+}
